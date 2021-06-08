@@ -29,3 +29,4 @@ int main()
     cout << k<<" is last prime No";
     return 0;
 }
+

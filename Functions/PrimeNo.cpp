@@ -1,7 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+bool PrimeCheck(int n){
+    for (int i = 2; i < n; i++)
+    {
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
+}
 
 void PrimeNo(int n){
     int count = 1;
@@ -34,6 +42,14 @@ int main(){
     int n;
     cin>>n;
 
-    PrimeNo(n);
+    // PrimeNo(n);
+
+    for (int i = 2; i < n; i++)
+    {
+        if(PrimeCheck(i)){
+            cout << i << endl;
+        }
+    }
+    
     return 0;
 }
