@@ -1,0 +1,17 @@
+1.  W.A.P. to check wheather a no is plindrom or not.
+
+2. W.A.P. to print all the prime factor of a given number.
+
+3. Print the sum of the series, 1-(2/2!)+(3/3!)-(4/4!)+.....+(n/n!). n will be input by the user.
+
+4. Calculate (x^y) without using math function.
+
+5. Calculate square root of x without using math function.
+
+6. W.A.P. to check wheather a given no is perfect number or        not. 
+A perfect number is a number whose sum of all the factor is equal to the number.
+For example, 6 = 1*2*3 and 1+2+3 = 6, so 6 is a perfect        number.
+
+7. W.A.P. to check wheather a given no is strong number or        not. A strong number is a number whose factorial of all the digit is equal to the number.
+
+For example, 145 = 1! + 4! + 5!, so 145 is a strong number
