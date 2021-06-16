@@ -4,6 +4,7 @@ using namespace std;
 int main()
 {
     int m, n;
+    cout << "Enter lengths" << endl;
     cin >> n >> m;
     int arr[n][m];
     for (int i = 0; i < n; i++)
