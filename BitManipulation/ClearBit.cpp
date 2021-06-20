@@ -6,9 +6,7 @@ int main()
     int n, pos;
     cin >> n >> pos;
 
-    n = n | (1 << pos);
-
-    cout << n;   // 1101        -->     1101
+    cout << (n & (~(1 << pos)));
 
     return 0;
 }
