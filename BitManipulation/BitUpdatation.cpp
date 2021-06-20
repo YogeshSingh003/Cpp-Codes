@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n, pos,value;
+    int n, pos,value;               
     cin >> n >> pos>>value;         
 
     int clearBit = n & (~(1 << pos));       
