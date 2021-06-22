@@ -2,17 +2,20 @@
 #include <string>
 using namespace std;
 
-string rev(string s,int i){
-    if(s == "")
+void reverse(string s){
+    if(s.length() == 0)
         return;
-    s.erase(1,i);
-    
+
+    string rev = s.substr(1);
+    reverse(rev);
+    cout << s[0];
 }
 
 
 int main()
 {
 
+    reverse("ram");
 
-return 0;
+    return 0;
 }
