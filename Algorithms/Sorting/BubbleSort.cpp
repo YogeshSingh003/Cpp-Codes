@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int n = 6;
+    int n ;
     cout << "Enter the length of array" << endl;
     cin >> n;
 
