@@ -2,25 +2,23 @@
 using namespace std;
  
 void inc(int n){
-    if (n == 1)
+    if (n == 0)
     {
-        cout << "1" << endl;
         return ;
     }
 
     inc(n - 1);
-    cout << n << endl;
+    cout << n << " ";
     
 }
 
 void dec(int n){
-    if (n ==1)
+    if (n ==0)
     {
-        cout << "1" << endl;
         return;
     }
 
-    cout << n << endl;
+    cout << n << " ";
     dec(n - 1);
 }
 int main()
