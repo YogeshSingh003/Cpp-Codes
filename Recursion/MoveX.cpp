@@ -4,12 +4,13 @@ using namespace std;
 string moveX(string s){
     if(s.length() == 0)
         return "";
-    string a = "";
+
     char c = s[0];
     string ans = moveX(s.substr(1));
-    if(c == 'x'){
+
+    if(c == 'x')
         return ans + c;
-    }
+        
     return c + ans;
 }
 
