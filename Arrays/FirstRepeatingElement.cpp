@@ -7,7 +7,7 @@ int main()
     // cout << "Enter the length of array" << endl;
     // cin >> n;
 
-    int arr[n] = {1 ,5 ,3 ,4 ,3 ,5 ,6};
+    int arr[n] = {1, 50, 60, 4, 50, 5, 60};
 
     // cout << "Enter input of array" << endl;
     // for (int i = 0; i < n; i++)
@@ -15,7 +15,7 @@ int main()
     //     cin >> arr[i];
     // }
 
-    const int N =   1;
+    const int N = 100;
     int a[N];
 
     for (int i = 0; i < N; i++)
