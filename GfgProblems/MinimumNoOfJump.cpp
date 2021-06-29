@@ -1,36 +1,60 @@
 #include <iostream>
 using namespace std;
 
-int main()
+ int minJumps(int arr[], int n)
 {
-    int n ;
-    cout << "Enter the length of array" << endl;
-    cin >> n;
-
-    int arr[n];
-
-    cout << "Enter input of array" << endl;
+    int len = 0;
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        if(arr[i] != 0)
+            len++;
     }
-    int step = 0;
-    int i = 0;
-    while(i<n)
+    // cout << len << endl;
+    int a[len];
+
+    int k = 0;
+    for (int i = 0; i < n; i++)
     {
-        int inc = 0;
-        inc = arr[i];
-        i = i + inc;
-        if(arr[i+1] == 0){
-            i = i+2;
-            n = n - 1;
-            continue;
+        if(arr[i] != 0){
+            a[k] = arr[i];
+            k++;
         }
-        step++;
-        if(i >= n-1)
-            break;
-        
     }
-    cout << step;
+    
+    // for (int i = 0; i < len; i++)
+    // {
+    //     cout << a[i] << " ";
+    // }
+    // cout <<  endl;
+
+    int step = 0;
+    int x = 0;
+    while (x < len)
+    {
+
+        x = x + a[x];
+        step++;
+        if (x >= len - 1)
+            break;
+    }
+    return step;
+}
+
+int main()
+{
+    int n = 10;
+    // cout << "Enter the length of array" << endl;
+    // cin >> n;
+
+    int arr[n] = {2, 3, 1, 1, 2, 4, 2, 0, 1, 1};
+
+    // cout << "Enter input of array" << endl;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+
+    cout << minJumps(arr, n);
+
     return 0;
 }
