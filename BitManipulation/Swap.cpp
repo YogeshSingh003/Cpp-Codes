@@ -13,6 +13,6 @@ void swaap(int a, int b)
 int main()
 {
 
-    swaap(3, 7);
+    swaap(5, 7);
     return 0;
 }
