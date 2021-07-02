@@ -30,6 +30,6 @@ int NoofOnes2(int a, int b)
 int main()
 {
 
-    cout << NoofOnes2(15, 7);
+    cout << NoofOnes2(8, 7);
     return 0;
 }

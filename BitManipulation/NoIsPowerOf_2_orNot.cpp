@@ -11,9 +11,9 @@ int main()
     int n;
     cin >> n;
     if (ispowerof2(n))
-        cout << n;
+        cout << "yes";
     else
-        cout << false;
+        cout << "no";
 
     return 0;
 }
