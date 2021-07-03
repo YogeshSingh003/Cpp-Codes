@@ -1,25 +1,26 @@
 #include <iostream>
 using namespace std;
 
+int countSetBits(int n)
+{
+    int totalCount = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        int count = 0;
+        int j = i;
+        while (j > 0)
+        {
+            j = j & (j - 1);
+            count++;
+        }
+        totalCount = totalCount + count;
+    }
+    return totalCount;
+}
+
 int main()
 {
+    cout << countSetBits(4);
 
-    int n;
-    cout << "Enter the length of array" << endl;
-    cin >> n;
-
-    int arr[n];
-
-    cout << "Enter input of array" << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    int x = 0;
-    for (int i = 0; i < n; i++)
-    {
-        x = x ^ arr[i];
-    }
-
-    int return 0;
+    return 0;
 }
