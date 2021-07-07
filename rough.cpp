@@ -1,41 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int firstOcc(int arr[], int n, int i, int key)
+void reverse2(string s, int n, int i)
 {
-    if (i == n)
-        return -1;
-    if (arr[i] == key)
-        return i;
-    return firstOcc(arr, n, i + 1, key);
+    if (n == i)
+        return;
+    reverse2(s, n, i + 1);
+    cout << s[i];
 }
 
-int lastOcc(int arr[], int n, int i, int key)
-{
-    // i = n - 1;
-    if (i == -1)
-        return -1;
-    if (arr[i] == key)
-        return i;
-    return lastOcc(arr, n, i - 1, key);
-}
 int main()
 {
-    int n;
-    cout << "Enter the length of array" << endl;
-    cin >> n;
-
-    int arr[n];
-
-    cout << "Enter input of array" << endl;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    int key;
-    cin >> key;
-
-    cout << firstOcc(arr, n, 0, key);
-    cout << lastOcc(arr, n, n, key);
+    string s = "RamKiJai haha";
+    int n = s.size();
+    reverse2(s, n, 0);
     return 0;
 }
