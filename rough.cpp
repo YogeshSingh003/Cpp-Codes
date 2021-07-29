@@ -1,18 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void reverse2(string s, int n, int i)
+void counting(int n)
 {
-    if (n == i)
+    if (n == 0)
         return;
-    reverse2(s, n, i + 1);
-    cout << s[i];
+    cout << n << " ";
+    counting(n - 1);
 }
 
 int main()
 {
-    string s = "RamKiJai haha";
-    int n = s.size();
-    reverse2(s, n, 0);
+    counting(5);
+
     return 0;
 }
