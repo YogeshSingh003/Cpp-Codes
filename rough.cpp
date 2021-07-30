@@ -1,17 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int pow(int n, int p)
+bool sorted(int arr[], int index)
 {
-    if (p == 0)
-        return 1;
+    if (index == 5)
+        return true;
 
-    return n * pow(n, p - 1);
+    if (arr[index] < arr[index - 1])
+        return false;
+
+    sorted(arr, index + 1);
 }
 
 int main()
 {
 
-    cout << pow(3, 4);
+    int arr[5] = {1, 30, 5, 6, 8};
+    cout << sorted(arr, 1);
     return 0;
 }
