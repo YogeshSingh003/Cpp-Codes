@@ -24,10 +24,9 @@ int main()
 
                 cout << arr[k] << " ";
             }
-        cout << endl;
+            cout << endl;
         }
         cout << endl;
-
     }
 
     return 0;
