@@ -1,22 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void prnt(int n)
+int pow(int n, int p)
 {
+    if (p == 0)
+        return 1;
 
-    if (n <= 0)
-        return;
-
-    int k = n % 10;
-    // cout << k << " ";
-    string s[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-    prnt(n / 10);
-    cout << s[k] << " ";
+    return n * pow(n, p - 1);
 }
 
 int main()
 {
-    prnt(304020);
 
+    cout << pow(3, 4);
     return 0;
 }
