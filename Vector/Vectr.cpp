@@ -30,6 +30,25 @@ int main()
     {
         cout << element << " ";
     }
+    cout << endl;
 
+    vector<int> v2(3, 50);
+    for (auto element : v2)
+    {
+        cout << element << " ";
+    }
+    cout << endl;
+
+    swap(v, v2);
+    for (auto element : v2)
+    {
+        cout << element << " ";
+    }
+    cout << endl;
+
+    for (auto element : v)
+    {
+        cout << element << " ";
+    }
     return 0;
 }
