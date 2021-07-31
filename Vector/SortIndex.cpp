@@ -25,20 +25,21 @@ int main()
     {
         v[i].first = i;
     }
-
     sort(v.begin(), v.end(), compare);
 
     for (auto element : arr)
     {
-        cout << element << " ";
+        cout << element << "  ";
     }
+    cout << endl;
+
     for (int i = 0; i < v.size(); i++)
     {
         arr[i] = v[i].first;
     }
     for (auto element : arr)
     {
-        cout << element << " ";
+        cout << element << "   ";
     }
     return 0;
 }
