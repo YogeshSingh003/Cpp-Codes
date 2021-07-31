@@ -1,21 +1,24 @@
 #include <iostream>
 using namespace std;
 
-bool sorted(int arr[], int index)
+int check(int arr[], int n, int i, int key)
 {
-    if (index == 5)
-        return true;
+    if (i == n)
+    {
+        return;
+    }
 
-    if (arr[index] < arr[index - 1])
-        return false;
-
-    sorted(arr, index + 1);
+    return check(arr, n, i + 1, key);
+    if (arr[i] == key)
+    {
+        return i;
+    }
 }
 
 int main()
 {
+    int arr[5] = {2, 6, 3, 2, 7};
+    cout << check(arr, 5, 0, 3);
 
-    int arr[5] = {1, 30, 5, 6, 8};
-    cout << sorted(arr, 1);
     return 0;
 }
