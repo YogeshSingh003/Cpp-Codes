@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-string removeDuplicate(string s){
-    if(s.length() == 0)
+string removeDuplicate(string s)
+{
+    if (s.length() == 0)
         return "";
     char c = s[0];
     string ans = removeDuplicate(s.substr(1));
@@ -14,7 +15,7 @@ string removeDuplicate(string s){
 
 int main()
 {
-    cout << removeDuplicate("aaabbbcdddeef") << endl;
+    cout << removeDuplicate("aacabbbcdddeef") << endl;
 
     return 0;
 }

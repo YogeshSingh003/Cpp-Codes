@@ -1,24 +1,29 @@
 #include <iostream>
 using namespace std;
 
-int check(int arr[], int n, int i, int key)
+void rever(int arr[], int i, int n)
 {
-    if (i == n)
-    {
+    if (i >= n / 2)
         return;
-    }
 
-    return check(arr, n, i + 1, key);
-    if (arr[i] == key)
-    {
-        return i;
-    }
+    swap(arr[i], arr[n - i - 1]);
+    rever(arr, i + 1, n);
+    swap(arr[i], arr[n - i - 1]);
 }
-
 int main()
 {
-    int arr[5] = {2, 6, 3, 2, 7};
-    cout << check(arr, 5, 0, 3);
+    int n = 5;
+    int arr[5] = {1, 2, 3, 4, 5};
 
+    for (auto e : arr)
+    {
+        cout << e << " ";
+    }
+    cout << endl;
+    rever(arr, 0, n);
+    for (auto e : arr)
+    {
+        cout << e << " ";
+    }
     return 0;
 }

@@ -7,23 +7,22 @@ void reverse(string s)
     if (s.length() == 0)
         return;
 
-    string rev = s.substr(1);
-    reverse(rev);
+    reverse(s.substr(1));
     cout << s[0];
 }
 
-void reverse2(string s, int n, int i)
+void reverse2(string s, int i)
 {
-    if (n == i)
+    if (s.length() == i)
         return;
-    reverse2(s, n, i + 1);
+    reverse2(s, i + 1);
     cout << s[i];
 }
 
 int main()
 {
 
-    reverse("ram");
+    reverse2("ram", 0);
 
     return 0;
 }

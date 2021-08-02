@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -45,6 +46,12 @@ int main()
         cout << element << " ";
     }
     cout << endl;
+
+    for (auto element : v)
+    {
+        cout << element << " ";
+    }
+    sort(v.begin(), v.end());
 
     for (auto element : v)
     {
