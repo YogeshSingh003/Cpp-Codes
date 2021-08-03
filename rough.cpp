@@ -1,29 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void rever(int arr[], int i, int n)
+void TowerOfHanoi(int n, char src, char dest, char helper)
 {
-    if (i >= n / 2)
+    if (n == 0)
         return;
 
-    swap(arr[i], arr[n - i - 1]);
-    rever(arr, i + 1, n);
-    swap(arr[i], arr[n - i - 1]);
+    TowerOfHanoi(n - 1, src, helper, dest);
+    cout << src << " to " << dest << endl;
+    TowerOfHanoi(n - 1, helper, dest, src);
 }
+
 int main()
 {
-    int n = 5;
-    int arr[5] = {1, 2, 3, 4, 5};
 
-    for (auto e : arr)
-    {
-        cout << e << " ";
-    }
-    cout << endl;
-    rever(arr, 0, n);
-    for (auto e : arr)
-    {
-        cout << e << " ";
-    }
+    TowerOfHanoi(3, 'A', 'B', 'C');
     return 0;
 }
