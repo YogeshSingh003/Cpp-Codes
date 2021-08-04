@@ -1,26 +1,20 @@
 #include <iostream>
 using namespace std;
 
-void per(string s, string ans = "")
+int stair(int n)
 {
-    if (s.length() == 0)
-    {
-        cout << ans << endl;
-        return;
-    }
+    if (n < 0)
+        return 0;
 
-    for (int i = 0; i < s.length(); i++)
-    {
-        char ch = s[i];
-        string ros = s.substr(0, i) + s.substr(i + 1);
+    if (n == 0)
+        return 1;
 
-        per(ros, ans + ch);
-    }
+    return stair(n - 3) + stair(n - 2) + stair(n - 1);
 }
 
 int main()
 {
+    cout << stair(4);
 
-    per("ABC", "");
     return 0;
 }
