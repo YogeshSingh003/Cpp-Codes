@@ -1,20 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int stair(int n)
+void per(string s, int idx)
 {
-    if (n < 0)
-        return 0;
+    if (s.size() <= idx)
+    {
+        cout << s << endl;
+        return;
+    }
 
-    if (n == 0)
-        return 1;
-
-    return stair(n - 3) + stair(n - 2) + stair(n - 1);
+    for (int i = idx; i < s.size(); i++)
+    {
+        swap(s[idx], s[i]);
+        per(s, idx + 1);
+        swap(s[idx], s[i]);
+    }
 }
 
 int main()
 {
-    cout << stair(4);
+    per("ABC", 0);
 
     return 0;
 }
