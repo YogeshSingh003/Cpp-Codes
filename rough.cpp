@@ -1,23 +1,26 @@
 #include <iostream>
 using namespace std;
 
-void subseq(string s, string ans = "")
+void per(string s, string ans = "")
 {
-    if (s.size() == 0)
+    if (s.length() == 0)
     {
         cout << ans << endl;
         return;
     }
-    char c = s[0];
-    string ros = s.substr(1);
 
-    subseq(ros, ans + c);
-    subseq(ros, ans);
+    for (int i = 0; i < s.length(); i++)
+    {
+        char ch = s[i];
+        string ros = s.substr(0, i) + s.substr(i + 1);
+
+        per(ros, ans + ch);
+    }
 }
 
 int main()
 {
 
-    subseq("ABC", "");
+    per("ABC", "");
     return 0;
 }
