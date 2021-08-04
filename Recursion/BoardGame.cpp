@@ -1,3 +1,5 @@
+// count total no of path from starting to ending point if you can take jumps which are come in dice
+
 #include <iostream>
 using namespace std;
 
