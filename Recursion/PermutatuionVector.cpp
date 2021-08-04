@@ -22,7 +22,7 @@ void per(vector<int> s, int idx)
 
 int main()
 {
-    per({1, 2, 3}, 0);
+    per({1, 4, 3}, 0);
 
     return 0;
 }
